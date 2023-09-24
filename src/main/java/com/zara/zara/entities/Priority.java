@@ -4,7 +4,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "brands")
+@Table(name = "PRIORITY")
 public class Priority {
     @Id
     private String id;

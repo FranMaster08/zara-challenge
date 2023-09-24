@@ -1,9 +1,12 @@
 package com.zara.zara.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
-import java.time.LocalDateTime;
-
+import java.sql.Timestamp;
+@Data
+@Entity
+@Table(name = "PRICES")
 public class Prices {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,10 +22,10 @@ public class Prices {
     private Products product;
 
     @Column(name = "start_date")
-    private LocalDateTime startDate;
+    private Timestamp startDate;
 
     @Column(name = "end_date")
-    private LocalDateTime endDate;
+    private Timestamp endDate;
 
     @ManyToOne
     @JoinColumn(name = "priority_id")
